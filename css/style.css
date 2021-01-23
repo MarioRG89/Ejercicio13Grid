@@ -1,0 +1,252 @@
+:root {
+    --primario: #0ad8f3;
+    --secundario: #ffc845;
+    --negro: #000000;
+    --claro: #ffffff;
+    --gris: #eeeeee;
+    --oscuro: #0aa0b4;
+    --padding: 1rem;
+    --paddingt: 2rem;
+}
+
+body {
+    background-color: var(--gris);
+    font-family: 'Roboto', sans-serif;
+
+}
+/* Globales */
+img {
+    max-width: 100%;
+}
+p {
+    line-height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 300;
+    margin: 1rem 0 1rem 0;
+}
+h1 {
+    font-size: 2.4rem;
+}
+h2 {
+    font-size: 2.2rem;
+}
+h3 {
+    font-size: 2rem;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    margin-top: 2rem;
+    padding: var(--padding);
+    background-color: var(--primario);
+}
+.header .contenedor{
+    display: grid;
+    grid-template-rows: 80% 20%;
+    justify-content: center;
+    grid-row-gap: 10px;
+    align-items: center;
+}
+.header .menu {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    justify-content: left;
+    grid-template-columns: 25% 20% 15%;
+    grid-column-gap:40px
+}
+  
+
+@media (min-width:992px) {
+    .header .contenedor {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 5%;
+         
+    }
+    .header .nombre-sitio {
+      justify-content: left;
+    }
+    .header .menu {
+        display: grid;
+        grid-template-columns: 25% 20% 15%;
+        justify-content: right;
+        align-items: center;
+    }
+}
+
+.header .menu a {
+    color: var(--claro);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/** Nosotros **/
+.nosotros {
+    margin-top: 2rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .nosotros {
+            /*Aquí va el posicionamiento grid */
+        display: grid;
+        grid-template-columns: repeat(2,45%);
+        text-align: left;
+        grid-column-gap: 5%;
+    }
+}
+.contenido-nosotros {
+    align-content: center;
+    display: grid;
+}
+.contenido-nosotros h2{
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+
+/* Venta */
+.venta {
+       /*Aquí va el posicionamiento grid */
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-column-gap: 5px;
+}
+.venta img {
+    width: 100%;
+}
+.destacada {
+        /*Aquí va el posicionamiento grid */
+        display: grid;
+        
+        grid-column-start: 1;
+        grid-column-end: 3; 
+    
+}
+@media screen and (min-width:700px) {
+
+    .destacada {
+            /*Aquí va el posicionamiento grid */
+            grid-template-columns: 50% 50%;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            
+    }
+}
+
+
+
+@media (min-width:768px) {
+    .venta {
+            /*Aquí va el posicionamiento grid */
+            display: grid;
+            grid-template-columns: repeat(3,33%);
+            grid-column-gap: 2%;
+            grid-row-gap: 2%;
+    }
+    
+    .destacada {
+            /*Aquí va el posicionamiento grid */
+            grid-template-columns: 50% 50%;
+            grid-column-start: 1;
+            grid-column-end: 3;
+    }  
+}
+
+
+.card {
+    background-color: var(--claro);
+    padding: var(--padding);
+    border:1px solid #AAA;
+}
+
+.anuncio {
+    display: grid;
+}
+
+.anuncio .precio {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.precio span {
+    font-weight: 300;
+    color: var(--primario);
+}
+.boton {
+    background-color: var(--primario);
+    display: block;
+    padding: var(--padding);
+
+    text-align: center;
+    color: var(--claro);
+    text-decoration: none;
+    border: 1px solid var(--primario);
+    transition: all .3s ease;
+}
+
+.boton:hover {
+    border: 1px solid var(--primario);
+    background-color: var(--claro);
+    color: var(--primario);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primario);
+    padding-top: var(--paddingt);
+    margin-top: 2rem;
+    color: var(--claro);
+}
+
+@media (min-width:768px) {
+    .footer .contenedor {
+            /*Aquí va el posicionamiento grid */
+            display: grid;
+            grid-template-columns: repeat(3,33%);
+            grid-column-gap: 2%;
+            grid-row-gap: 5%;
+    }
+}
+
+.footer .navegacion a {
+    display: block;
+    color: var(--claro);
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.footer .contenedor-casas {
+        /*Aquí va el posicionamiento grid */
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-row-gap:2%;
+        grid-column-gap: 5%;
+}
+
+.footer .contenedor-casas .casa {
+        /*Aquí va el posicionamiento grid */
+        display: grid;
+        grid-column-gap: 5%;
+        grid-row-gap:5%;
+        grid-template-columns: repeat(2,50%);
+        margin-bottom: 30px;
+       
+}
+.footer .contenedor-casas .casa p {
+    margin: 0;
+}
+.copyright {
+    background-color: var(--oscuro);
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+}
